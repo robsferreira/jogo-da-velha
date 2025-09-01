@@ -1,0 +1,150 @@
+/* Importação de fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Estilos globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos dos botões */
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Estilos do tabuleiro */
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.celula {
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.celula:hover:not(.x, .o) {
+    background-color: #e0e6e9;
+}
+
+.x {
+    color: #e74c3c;
+}
+
+.o {
+    color: #3498db;
+}
+
+/* Status do jogo */
+.status-jogo {
+    margin-top: 20px;
+}
+
+#mensagem-status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .tabuleiro {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .celula {
+        font-size: 2.5rem;
+    }
+}
+
+/* Estilos do Placar */
+.placar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.placar p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.placar .score-x {
+    color: #e74c3c;
+}
+
+.placar .score-o {
+    color: #3498db;
+}
+
+#placar-x, #placar-o {
+    font-size: 1.2rem;
+}

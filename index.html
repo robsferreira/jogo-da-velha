@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Jogo da Velha</h1>
+
+        <div id="opcoes-jogo" class="opcoes-jogo">
+            <h2>Selecione o modo de jogo</h2>
+            <button id="btn-maquina">Contra a Máquina</button>
+            <button id="btn-jogador">Contra Outro Jogador</button>
+        </div>
+
+        <div id="opcoes-dificuldade" class="opcoes-dificuldade hidden">
+            <h2>Selecione a dificuldade</h2>
+            <button id="btn-facil">Fácil</button>
+            <button id="btn-medio">Médio</button>
+            <button id="btn-dificil">Difícil</button>
+        </div>
+
+        <div id="jogo" class="jogo hidden">
+            <div class="tabuleiro" id="tabuleiro">
+                <div class="celula" data-celula-indice="0"></div>
+                <div class="celula" data-celula-indice="1"></div>
+                <div class="celula" data-celula-indice="2"></div>
+                <div class="celula" data-celula-indice="3"></div>
+                <div class="celula" data-celula-indice="4"></div>
+                <div class="celula" data-celula-indice="5"></div>
+                <div class="celula" data-celula-indice="6"></div>
+                <div class="celula" data-celula-indice="7"></div>
+                <div class="celula" data-celula-indice="8"></div>
+            </div>
+
+            <div class="status-jogo">
+                <p id="mensagem-status">Vez do 'X'</p>
+                <div class="placar">
+                    <p>Placar</p>
+                    <p class="score-x">X: <span id="placar-x">0</span></p>
+                    <p class="score-o">O: <span id="placar-o">0</span></p>
+                </div>
+                <button id="btn-reiniciar">Reiniciar Jogo</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
